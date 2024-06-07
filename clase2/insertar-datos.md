@@ -30,5 +30,47 @@
 
 
 ## Sintáxis completa (se mencionan las columnas)
+
+    INSERT INTO nombreTabla  
+        ( columna2, columna3, columna4 )  
+      VALUES  
+        ( valor2, valor3, valor4 ); 
+
+> Ejemplo práctico:
+
+    INSERT INTO personas  
+        ( apellido, nombre, dni, alta )  
+      VALUES  
+        ( 'Martínez', 'Vanesa', 35741951, '2006-12-12' );   
+
 ## Sintáxis simplificada (NO se mencionan las columnas)
 
+    INSERT INTO nombreTabla  
+      VALUES  
+        ( valorID, valor2, valor3, valor4 );
+
+> Ejemplo práctico:
+
+    INSERT INTO personas  
+      VALUES  
+        ( DEFAULT, 'Álvarez', 'Fernando', 32912457, '2007-11-02' );
+
+----
+### Ejemplo para insertar múltiples registros
+
+    INSERT INTO personas 
+        ( apellido, nombre, dni, alta ) 
+      VALUES    
+        ( 'Page', 'Jimmy', 18543219, '1954-01-09' ), 
+        ( 'Plant', 'Robert', 18543220, '1960-01-09' ),
+        ( 'Bonham', 'Bonzo', 18543221, '1960-01-09' ),
+        ( 'Jones', 'John', 18543222, '1960-01-09' );
+        
+
+    INSERT INTO personas
+      VALUES    
+        ( DEFAULT, 'Page', 'Jimmy', 18543219, '1954-01-09' ), 
+        ( DEFAULT, 'Plant', 'Robert', 18543220, '1960-01-09' ),
+        ( DEFAULT, 'Bonham', 'Bonzo', 18543221, '1960-01-09' ),
+        ( DEFAULT, 'Jones', 'John', 18543222, '1960-01-09' );
+        
